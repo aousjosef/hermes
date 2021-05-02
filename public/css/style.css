@@ -1,0 +1,104 @@
+body {
+  background-color: #222831;
+}
+
+nav {
+
+  background-color: #eeeeee;
+}
+
+
+.navDiv {
+margin: auto;
+height: 4.19rem;
+
+}
+
+.logoImg {
+  width: 4.6rem;
+  height: 4.6rem;
+  margin: auto;
+
+
+
+}
+
+.masterDiv {
+  place-items:center;
+  max-width: 48rem;
+
+
+}
+
+.mainDiv {
+  margin-top: 100px;
+  padding: 0;
+
+  background-color: #eeeeee;
+  display: inline-block;
+
+
+
+
+}
+
+.titleText {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-left: 3.1%;
+  float: left;
+  font-weight: 700;
+  padding-right: 1rem;
+  color: #222831;
+  text-align: justify;
+}
+
+.postTime {
+  float: right;
+color: #222831;
+  margin-right: 3.1%;
+margin-bottom: 0.5rem;
+font-size: 0.9rem;
+font-weight: 500;
+margin-top: 0.8rem;
+}
+
+.cen {
+  text-align: right;
+
+}
+
+.imgcen{
+  text-align: center;
+
+}
+.imgSource {
+  margin-bottom: 30px;
+  height: 300px;
+  width: 700px;
+
+}
+
+.artilceText {
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222831;
+  margin-left: 1%;
+}
+
+.mediaSource {
+  color: #222831;
+  font-weight: 800;
+  margin-left: 1%;
+}
+
+.txtLeft {
+  text-align: left;
+  text-align: justify;
+}
+
+.fullArticleButton {
+
+
+}

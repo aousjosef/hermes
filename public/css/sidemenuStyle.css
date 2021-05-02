@@ -1,0 +1,130 @@
+:root {
+  --bg-dark: #222831;
+  --bg-lightdark: #393e46;
+  --bg-blue: #00adb5;
+  --bg-white: #eeeeee;
+}
+
+body::-webkit-scrollbar {
+width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+  background: var(--bg-dark);
+}
+
+body::-webkit-scrollbar-thumb{
+background: var(--bg-blue);
+}
+
+.sideNavbar {
+
+
+  width: 5rem;
+  height: 100vw;
+  position: fixed;
+  background-color: var(--bg-white);
+  transition: 200ms ease;
+  text-align: center;
+
+}
+
+.navbar-nav{
+
+  line-style:none;
+  padding: 0;
+  margin: 5.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+
+
+
+
+}
+
+
+.nav-item{
+
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.link-text{
+  display: none;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  text-align: center;
+
+}
+
+.fas{
+  min-width: 5rem;
+
+  color: var(--bg-dark);
+}
+
+
+
+
+
+.fas:hover{
+  color: var(--bg-blue);
+}
+
+.nav-link:hover{
+  color: var(--bg-blue);
+}
+
+
+@media screen and (min-width:800px) {
+/* NOTE: Large screens */
+.sideNavbar {
+  width: 5rem;
+  height: 100vh;
+ }
+
+ .sideNavbar:hover{
+   width: 14rem;
+ }
+
+ .sideNavbar:hover .link-text{
+   display: block;
+ }
+}
+
+/* NOTE: BELOW IS SMALL SCREEN */
+@media screen and (max-width:800px) {
+
+  .sideNavbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+
+   }
+
+
+.link-text{
+  display: none;
+}
+
+.navbar-nav{
+  margin-top: 0;
+
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+}
