@@ -26,75 +26,20 @@ res.render("ejsindex", {fullJSON});
    });
 });
 
-app.get("/technology", (req, res) => {
 
-  axios.get("https://newsapi.org/v2/top-headlines?apiKey=958ad3b5b45b4c7e8c40d65aaf0c1c34&language=en&category=technology").
-  then(function(response)
-  {
-    console.log(response.status);
-//JSON  logic here
-fullJSON = response.data; //Send it as an object
+app.get("/:id", (req,res) => {
 
-res.render("ejsindex", {fullJSON});
-
-//End of JSON LOGIC
-   });
-
+console.log(req.params.id);
+let newscata = req.params.id;
+let apiurl = "https://newsapi.org/v2/top-headlines?apiKey=958ad3b5b45b4c7e8c40d65aaf0c1c34&language=en&category=" + newscata;
+axios.get(apiurl).
+then(function(response){
+  console.log(response.status);
+  fullJSON = response.data;
+  res.render("ejsindex", {fullJSON});
+}
+);
 });
-
-
-app.get("/sport", (req, res) => {
-
-  axios.get("https://newsapi.org/v2/top-headlines?apiKey=958ad3b5b45b4c7e8c40d65aaf0c1c34&language=en&category=sports").
-  then(function(response)
-  {
-    console.log(response.status);
-//JSON  logic here
-fullJSON = response.data; //Send it as an object
-
-res.render("ejsindex", {fullJSON});
-
-//End of JSON LOGIC
-   });
-
-});
-
-
-
-app.get("/science", (req, res) => {
-
-  axios.get("https://newsapi.org/v2/top-headlines?apiKey=958ad3b5b45b4c7e8c40d65aaf0c1c34&language=en&category=science").
-  then(function(response)
-  {
-    console.log(response.status);
-//JSON  logic here
-fullJSON = response.data; //Send it as an object
-
-res.render("ejsindex", {fullJSON});
-
-//End of JSON LOGIC
-   });
-
-});
-
-
-app.get("/business", (req, res) => {
-
-  axios.get("https://newsapi.org/v2/top-headlines?apiKey=958ad3b5b45b4c7e8c40d65aaf0c1c34&language=en&category=business").
-  then(function(response)
-  {
-    console.log(response.status);
-//JSON  logic here
-fullJSON = response.data; //Send it as an object
-
-res.render("ejsindex", {fullJSON});
-
-//End of JSON LOGIC
-   });
-
-});
-
-
 
 
 app.listen(process.env.PORT || 3000, function() {
